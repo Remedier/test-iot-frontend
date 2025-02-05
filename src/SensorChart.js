@@ -11,7 +11,7 @@ function SensorChart() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch("http://localhost:8000/sensor-data");
+                const response = await fetch("https://test-iot-backend-production.up.railway.app/sensor-data");
                 const data = await response.json();
                 setSensorData(data.sensor_data);
             } catch (error) {
